@@ -21,7 +21,7 @@ php ~/path/composer.phar install
 
 ### Composer Sidebar
  
-* the `composer.json` was originally populated with (many braincells were lost trying to discover this):
+* the `composer.json` was originally populated with (many brain cells were lost trying to discover this):
 
 ```
 php ~/path/composer.phar require widmogrod/php-functional:dev-master
