@@ -8,6 +8,7 @@
 * uses [this](https://hub.docker.com/r/phpunit/phpunit/) Docker image
     * as of AUG 2017, uses PHPUnit 6.0.x and PHP 7.0
 * uses [Composer](https://getcomposer.org)
+* examples inspired by [Functional PHP](https://www.packtpub.com/application-development/functional-php) using [php-functional](https://github.com/widmogrod/php-functional) library
 
 ### Composer
 
@@ -19,7 +20,7 @@ php ~/path/composer.phar install
 ```
 
 ### Composer Sidebar
-r
+ 
 * the `composer.json` was originally populated with (many braincells were lost trying to discover this):
 
 ```
