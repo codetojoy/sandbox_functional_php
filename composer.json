@@ -1,0 +1,6 @@
+{
+    "require": {
+        "widmogrod/php-functional": "dev-master",
+        "phpunit/phpunit": "^6.3"
+    }
+}
