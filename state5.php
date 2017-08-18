@@ -14,28 +14,21 @@ class Registry {
     }
 
     public function register($user) {
-        array_push($this->users, $user);
-    }
-
-    public function logUsers($msg) {
-        // echo "begin: ".$msg."\n";
-        // print_r($this->users);
+        $instance = new self();
+        $instance->users = $this->users;
+        array_push($instance->users, $user);
+        return $instance;
     }
 }
 
 function updateState($id, $registry, $dummy) {
-    echo "TRACER updateState id: ".$id."\n";
-    $registry->register($id);
-
-    return [$id, $registry];
+    $newRegistry = $registry->register($id);
+    return [$id, $newRegistry];
 }
 
 function buildState($id, $dummy = [])
 { 
-    echo "TRACER buildState id: ".$id."\n";
     return s\state(function($registry) use ($id, $dummy) { 
-        echo "TRACER inside s id: ".$id."\n";
-        $registry->logUsers("inside s");
         return updateState($id, $registry, $dummy);
     }); 
 } 
